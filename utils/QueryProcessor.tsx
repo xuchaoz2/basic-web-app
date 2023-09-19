@@ -24,10 +24,17 @@ export default function QueryProcessor(query: string): string {
     return (x+y).toString();
   }
 
-  /**const findLargest = query.match(/Which of the following numbers is the largest: ((\d+), )* (\d+) ?/); 
-  if (addMatch) {
-    const x: number = parseInt(addMatch[1]);
-    const y: number = parseInt(addMatch[2]);
+  const minusMatch = query.match(/What is (\d+) minus (\d+)/);
+  if (minusMatch) {
+    const x: number = parseInt(minusMatch[1]);
+    const y: number = parseInt(minusMatch[2]);
+    return (x-y).toString();
+  }
+
+  /**const findLargest = query.matchAll(/Which of the following numbers is the largest: ((\d+), )* (\d+) ?/); 
+  if (findLargest) {
+    var x: number = 0;
+    for(var i: number = 0; i < parse(findLargest)
     return (x+y).toString();
   }**/
 

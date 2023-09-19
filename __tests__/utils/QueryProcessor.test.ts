@@ -43,4 +43,9 @@ describe("QueryProcessor", () => {
         expect(QueryProcessor("What is 5 multiplied by 2?")).toEqual("10");
         expect(QueryProcessor("What is 11 multiplied by 11?")).toEqual("121");
     });
+
+    test('should minus numbers', () => {
+        expect(QueryProcessor("What is 5 minus 55?")).toEqual("-50");
+        expect(QueryProcessor("What is 12 minus 1?")).toEqual("11");
+    });
 });
