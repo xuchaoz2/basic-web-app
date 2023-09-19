@@ -38,4 +38,9 @@ describe("QueryProcessor", () => {
         expect(QueryProcessor("What is 5 plus 52?")).toEqual("57");
         expect(QueryProcessor("What is 12 plus 1?")).toEqual("13");
     });
+
+    test('should mult numbers', () => {
+        expect(QueryProcessor("What is 5 multiplied by 2?")).toEqual("10");
+        expect(QueryProcessor("What is 11 multiplied by 11?")).toEqual("121");
+    });
 });
