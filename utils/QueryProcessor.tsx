@@ -44,6 +44,13 @@ export default function QueryProcessor(query: string): string {
     const y: number = parseInt(multMatch[2]);
     return (x*y).toString();
   }
+
+  const powerMatch = query.match(/What is (\d+) to the power of (\d+)/);
+  if (powerMatch) {
+    const x: number = parseInt(powerMatch[1]);
+    const y: number = parseInt(powerMatch[2]);
+    return (Math.pow(x, y)).toString();
+  }
   
   return "";
 }

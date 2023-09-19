@@ -48,4 +48,9 @@ describe("QueryProcessor", () => {
         expect(QueryProcessor("What is 5 minus 55?")).toEqual("-50");
         expect(QueryProcessor("What is 12 minus 1?")).toEqual("11");
     });
+
+    test('should power numbers', () => {
+        expect(QueryProcessor("What is 2 to the power of 4?")).toEqual("16");
+        expect(QueryProcessor("What is 10 to the power of 2?")).toEqual("100");
+    });
 });
